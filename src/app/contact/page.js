@@ -12,5 +12,3 @@ export default function Contact() {
     </div>
   );
 }
-
-npm audit fix --force
