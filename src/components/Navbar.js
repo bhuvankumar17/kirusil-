@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -21,11 +22,14 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            {/* K? Logo Icon */}
-            <div className="relative w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-              <span className="text-xl font-black text-lime-300 leading-none" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>K</span>
-              <span className="absolute -right-1 -bottom-0.5 text-sm font-bold text-blue-700">?</span>
-            </div>
+            <Image
+              src="/logo.jpg"
+              alt="Kirusil Logo"
+              width={44}
+              height={44}
+              className="rounded-xl shadow-lg"
+              priority
+            />
             <div className="hidden sm:flex flex-col">
               <span className="text-lg font-bold bg-gradient-to-r from-lime-500 to-blue-600 bg-clip-text text-transparent">Kirusil</span>
               <span className="text-[10px] font-medium text-zinc-500 dark:text-zinc-400 -mt-1">Tuition Center</span>
