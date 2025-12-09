@@ -1,0 +1,11 @@
+# Robots.txt for Kirusil Tuition Center
+# https://kirusil.vercel.app
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://kirusil.vercel.app/sitemap.xml
