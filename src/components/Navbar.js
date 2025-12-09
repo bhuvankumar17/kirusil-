@@ -38,7 +38,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 lg:px-4 py-2 text-sm font-medium text-zinc-600 rounded-lg transition-all duration-200 hover:text-blue-600 hover:bg-blue-50 dark:text-zinc-300 dark:hover:text-blue-400 dark:hover:bg-zinc-800"
+                className="px-3 lg:px-4 py-2 text-base font-medium text-zinc-600 rounded-lg transition-all duration-200 hover:text-blue-600 hover:bg-blue-50 dark:text-zinc-300 dark:hover:text-blue-400 dark:hover:bg-zinc-800"
               >
                 {link.label}
               </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <Link
               href="/contact"
-              className="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-200 hover:-translate-y-0.5"
+              className="px-4 py-2 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-200 hover:-translate-y-0.5"
             >
               Get Started
             </Link>
