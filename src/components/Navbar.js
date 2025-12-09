@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -21,8 +22,18 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-blue-600">Kirusil</span>
-            <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Tuition</span>
+            <Image
+              src="/logo.png"
+              alt="Kirusil Logo"
+              width={45}
+              height={45}
+              className="rounded-lg"
+              priority
+            />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">Kirusil</span>
+              <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400 -mt-1">Tuition Center</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
