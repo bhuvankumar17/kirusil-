@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useSession, signOut } from 'next-auth/react';
 
 export default function Navbar() {
+  const { data: session } = useSession();
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -49,14 +51,36 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button - Desktop */}
+          {/* Auth Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            <Link
-              href="/contact"
-              className="px-4 py-2 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-200 hover:-translate-y-0.5"
-            >
-              Get Started
-            </Link>
+            {session ? (
+              <>
+                <span className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Hi, <span className="font-semibold text-zinc-900 dark:text-white">{session.user?.name?.split(' ')[0]}</span>
+                </span>
+                <button
+                  onClick={() => signOut()}
+                  className="px-4 py-2 text-sm font-medium text-zinc-600 hover:text-red-600 rounded-lg transition-colors"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="px-4 py-2 text-sm font-medium text-zinc-600 hover:text-blue-600 rounded-lg transition-colors dark:text-zinc-300"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  className="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  Sign Up
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,9 +113,42 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-700">
+              {session ? (
+                <>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+                    Signed in as <span className="font-semibold text-zinc-900 dark:text-white">{session.user?.name}</span>
+                  </p>
+                  <button
+                    onClick={() => { signOut(); setIsOpen(false); }}
+                    className="w-full text-left py-2 text-sm font-medium text-red-600 hover:text-red-700"
+                  >
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <div className="flex gap-3">
+                  <Link
+                    href="/login"
+                    onClick={() => setIsOpen(false)}
+                    className="flex-1 py-2 text-center text-sm font-medium text-zinc-600 border border-zinc-300 rounded-lg hover:bg-zinc-50 dark:text-zinc-300 dark:border-zinc-600"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    href="/signup"
+                    onClick={() => setIsOpen(false)}
+                    className="flex-1 py-2 text-center text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>
     </nav>
   );
+}
 }
