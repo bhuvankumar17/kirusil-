@@ -31,7 +31,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm">
-              Expert tutoring in Physics and Mathematics. Helping students achieve academic excellence since 2020.
+              Quality tutoring in Physics and Mathematics. Helping students achieve academic excellence since 2020.
             </p>
             <div className="mt-6 flex gap-4">
               <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 text-zinc-400 transition-colors hover:bg-blue-600 hover:text-white">

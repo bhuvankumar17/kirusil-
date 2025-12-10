@@ -64,7 +64,7 @@ export default function About() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-3xl dark:bg-blue-900">
                 👨‍🏫
               </div>
-              <h3 className="mt-4 font-semibold text-black dark:text-white">Expert Faculty</h3>
+              <h3 className="mt-4 font-semibold text-black dark:text-white">Qualified Faculty</h3>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 Highly qualified teachers with years of experience
               </p>

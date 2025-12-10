@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Kirusil Tuition Center | Expert Physics & Maths Tutoring",
+    default: "Kirusil Tuition Center | Physics & Maths Tutoring",
     template: "%s | Kirusil Tuition Center",
   },
-  description: "Kirusil Tuition Center offers expert tutoring in Physics and Mathematics for students of all levels. Personalized learning, experienced teachers, and proven results. Join us for academic excellence!",
+  description: "Kirusil Tuition Center offers quality tutoring in Physics and Mathematics for students of all levels. Personalized learning, experienced teachers, and proven results. Join us for academic excellence!",
   keywords: ["physics tuition", "maths tuition", "tuition center", "physics tutoring", "mathematics tutoring", "online tuition", "Kirusil", "exam preparation", "CBSE tuition", "ICSE tuition"],
   authors: [{ name: "Kirusil Tuition Center" }],
   creator: "Kirusil Tuition Center",
@@ -40,8 +40,8 @@ export const metadata = {
     locale: "en_IN",
     url: "https://kirusil.vercel.app",
     siteName: "Kirusil Tuition Center",
-    title: "Kirusil Tuition Center | Expert Physics & Maths Tutoring",
-    description: "Expert tutoring in Physics and Mathematics. Personalized learning with experienced teachers for academic excellence.",
+    title: "Kirusil Tuition Center | Physics & Maths Tutoring",
+    description: "Quality tutoring in Physics and Mathematics. Personalized learning with experienced teachers for academic excellence.",
     images: [
       {
         url: "/og-image.png",
@@ -53,8 +53,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kirusil Tuition Center | Expert Physics & Maths Tutoring",
-    description: "Expert tutoring in Physics and Mathematics. Join Kirusil for academic excellence!",
+    title: "Kirusil Tuition Center | Physics & Maths Tutoring",
+    description: "Quality tutoring in Physics and Mathematics. Join Kirusil for academic excellence!",
     images: ["/og-image.png"],
   },
   verification: {
@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
               "name": "Kirusil Tuition Center",
-              "description": "Expert tutoring in Physics and Mathematics for students of all levels.",
+              "description": "Quality tutoring in Physics and Mathematics for students of all levels.",
               "url": "https://kirusil.vercel.app",
               "logo": "https://kirusil.vercel.app/logo.jpg",
               "sameAs": [

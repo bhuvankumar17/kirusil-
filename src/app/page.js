@@ -34,7 +34,7 @@ export default function Home() {
           </h1>
           
           <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 md:text-xl">
-            Expert tutoring to help you excel in Physics and Maths. From basic concepts to advanced problem-solving, we guide you every step of the way.
+            Quality tutoring to help you excel in Physics and Maths. From basic concepts to advanced problem-solving, we guide you every step of the way.
           </p>
           
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -100,7 +100,7 @@ export default function Home() {
                 👨‍🏫
               </div>
               <h3 className="mt-6 text-xl font-bold text-zinc-900 dark:text-white">
-                Expert Teachers
+                Qualified Teachers
               </h3>
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
                 Learn from experienced educators with proven track records in Physics and Mathematics.
@@ -158,7 +158,7 @@ export default function Home() {
       <section className="bg-zinc-100 py-20 dark:bg-zinc-900/50">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">Our Expertise</span>
+            <span className="text-sm font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">What We Teach</span>
             <h2 className="mt-2 text-3xl font-bold text-zinc-900 dark:text-white md:text-4xl">
               Subjects We Teach
             </h2>
