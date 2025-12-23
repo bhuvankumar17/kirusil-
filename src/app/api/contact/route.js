@@ -31,7 +31,7 @@ export async function POST(request) {
     // Send email notification via Resend
     try {
       await resend.emails.send({
-        from: 'Kirusil Contact Form <onboarding@resend.dev>',
+        from: 'Kurisil Contact Form <onboarding@resend.dev>',
         to: 'kirusildata@gmail.com',
         subject: `New Contact Form Submission: ${subject || 'General Inquiry'}`,
         html: `
@@ -65,7 +65,7 @@ export async function POST(request) {
                 </div>
               </div>
               <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
-                <p style="color: #6b7280; font-size: 12px; margin: 0;">This email was sent from the Kirusil Tuition Center contact form.</p>
+                <p style="color: #6b7280; font-size: 12px; margin: 0;">This email was sent from the Kurisil Academy contact form.</p>
               </div>
             </div>
           </div>

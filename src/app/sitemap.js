@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://kirusil.vercel.app';
+  const baseUrl = 'https://kurisil.vercel.app';
   
   const routes = [
     {

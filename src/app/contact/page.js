@@ -58,7 +58,7 @@ export default function Contact() {
         </svg>
       ),
       title: 'Visit Us',
-      details: ['123 Education Street', 'Your City, State 12345'],
+      details: ['3/38 Mettu Street, Pachal (P.O)', 'Namakkal, Tamil Nadu 637018'],
       color: 'blue',
     },
     {
@@ -68,7 +68,7 @@ export default function Contact() {
         </svg>
       ),
       title: 'Call Us',
-      details: ['+91 12345 67890', '+91 98765 43210'],
+      details: ['+91 91591 29187'],
       color: 'green',
     },
     {
@@ -78,7 +78,7 @@ export default function Contact() {
         </svg>
       ),
       title: 'Email Us',
-      details: ['info@kirusil.com', 'support@kirusil.com'],
+      details: ['kurisilphysicsacademy2020@gmail.com'],
       color: 'purple',
     },
     {
@@ -104,9 +104,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-green-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-lime-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-600 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-cyan-500 to-lime-500 py-20">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/svg%3E\")"}}></div>
         <div className="relative mx-auto max-w-6xl px-6 text-center">
           <h1 className="text-4xl font-bold text-white md:text-5xl">Get in Touch</h1>
@@ -261,7 +261,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-green-600 px-6 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-lime-500 px-6 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {loading ? (
                     <>
@@ -285,17 +285,48 @@ export default function Contact() {
 
             {/* Map & Additional Info */}
             <div className="space-y-6">
-              {/* Map Placeholder */}
+              {/* Google Maps Embed */}
               <div className="overflow-hidden rounded-3xl bg-zinc-200 dark:bg-zinc-800">
-                <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30">
-                  <div className="text-center">
-                    <svg className="mx-auto h-16 w-16 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <p className="mt-2 text-zinc-500 dark:text-zinc-400">Map Location</p>
-                  </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.8834!2d78.1594!3d11.2239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcf48a51a0001%3A0x0!2s3%2F38%20Mettu%20Street%2C%20Pachal%2C%20Namakkal%2C%20Tamil%20Nadu%20637018!5e0!3m2!1sen!2sin!4v1702300000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="aspect-video w-full"
+                  title="Kurisil Physics Academy Location"
+                ></iframe>
+              </div>
+
+              {/* Address Card */}
+              <div className="rounded-3xl bg-white p-6 shadow-sm dark:bg-zinc-900">
+                <h3 className="font-semibold text-zinc-900 dark:text-white flex items-center gap-2">
+                  <svg className="h-5 w-5 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Our Location
+                </h3>
+                <div className="mt-3 text-zinc-600 dark:text-zinc-400">
+                  <p className="font-medium text-zinc-900 dark:text-white">Kurisil Physics Academy</p>
+                  <p>3/38 Mettu Street</p>
+                  <p>Pachal (P.O)</p>
+                  <p>Namakkal, Tamil Nadu</p>
+                  <p>637018</p>
                 </div>
+                <a
+                  href="https://www.google.com/maps/search/3%2F38+Mettu+Street+Pachal+Namakkal+Tamil+Nadu+637018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cyan-500 hover:text-cyan-600"
+                >
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Get Directions
+                </a>
               </div>
 
               {/* Quick Actions */}
@@ -303,16 +334,16 @@ export default function Contact() {
                 <h3 className="font-semibold text-zinc-900 dark:text-white">Quick Actions</h3>
                 <div className="mt-4 space-y-3">
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+919159129187"
                     className="flex items-center gap-3 rounded-xl bg-green-50 p-4 text-green-700 transition-colors hover:bg-green-100 dark:bg-green-900/30 dark:text-green-400 dark:hover:bg-green-900/50"
                   >
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    <span className="font-medium">Call Now: +91 12345 67890</span>
+                    <span className="font-medium">Call Now: +91 91591 29187</span>
                   </a>
                   <a
-                    href="https://wa.me/911234567890"
+                    href="https://wa.me/919159129187"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 rounded-xl bg-emerald-50 p-4 text-emerald-700 transition-colors hover:bg-emerald-100 dark:bg-emerald-900/30 dark:text-emerald-400 dark:hover:bg-emerald-900/50"
@@ -323,19 +354,19 @@ export default function Contact() {
                     <span className="font-medium">WhatsApp Us</span>
                   </a>
                   <a
-                    href="mailto:info@kirusil.com"
+                    href="mailto:kurisilphysicsacademy2020@gmail.com"
                     className="flex items-center gap-3 rounded-xl bg-blue-50 p-4 text-blue-700 transition-colors hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50"
                   >
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <span className="font-medium">Email: info@kirusil.com</span>
+                    <span className="font-medium">Email: kurisilphysicsacademy2020@gmail.com</span>
                   </a>
                 </div>
               </div>
 
               {/* FAQ Teaser */}
-              <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-green-600 p-6 text-white">
+              <div className="rounded-3xl bg-gradient-to-r from-cyan-500 to-lime-500 p-6 text-white">
                 <h3 className="font-semibold">Have Questions?</h3>
                 <p className="mt-2 text-sm text-white/80">
                   Check out our frequently asked questions or reach out to us directly.

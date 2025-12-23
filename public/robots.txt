@@ -1,4 +1,4 @@
-# Robots.txt for Kirusil Tuition Center
+# Robots.txt for Kirusil Academy
 # https://kirusil.vercel.app
 
 User-agent: *

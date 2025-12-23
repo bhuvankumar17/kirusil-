@@ -60,8 +60,8 @@ export default function Courses() {
 
   const getColorClasses = (color) => {
     const colors = {
-      blue: "border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950",
-      green: "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950",
+      blue: "border-cyan-200 bg-cyan-50 dark:border-cyan-800 dark:bg-cyan-950",
+      green: "border-lime-200 bg-lime-50 dark:border-lime-800 dark:bg-lime-950",
       purple: "border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950",
       orange: "border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950",
     };
@@ -70,8 +70,8 @@ export default function Courses() {
 
   const getTitleColor = (color) => {
     const colors = {
-      blue: "text-blue-700 dark:text-blue-400",
-      green: "text-green-700 dark:text-green-400",
+      blue: "text-cyan-700 dark:text-cyan-400",
+      green: "text-lime-700 dark:text-lime-400",
       purple: "text-purple-700 dark:text-purple-400",
       orange: "text-orange-700 dark:text-orange-400",
     };
@@ -81,7 +81,7 @@ export default function Courses() {
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-green-600 py-20">
+      <section className="bg-gradient-to-r from-cyan-500 to-lime-500 py-20">
         <div className="mx-auto max-w-6xl px-6 text-center">
           <h1 className="text-4xl font-bold text-white md:text-5xl">Our Courses</h1>
           <p className="mt-4 text-lg text-white/90">
@@ -185,7 +185,7 @@ export default function Courses() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-block rounded-full bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-blue-700"
+            className="mt-8 inline-block rounded-full bg-cyan-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-cyan-600"
           >
             Get Free Counseling
           </Link>

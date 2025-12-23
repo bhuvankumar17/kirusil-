@@ -47,11 +47,11 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-green-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950 flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-lime-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950 flex items-center justify-center py-12 px-4">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg shadow-blue-500/30 mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-lime-500 rounded-2xl shadow-lg shadow-cyan-500/30 mb-4">
             <span className="text-3xl font-black text-lime-300">K</span>
           </div>
           <h1 className="text-3xl font-bold text-zinc-900 dark:text-white">Welcome Back</h1>
@@ -107,7 +107,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-green-600 px-6 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-lime-500 px-6 py-4 font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? (
                 <>
@@ -131,7 +131,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Don&apos;t have an account?{' '}
-              <Link href="/signup" className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400">
+              <Link href="/signup" className="font-semibold text-cyan-500 hover:text-cyan-600 dark:text-cyan-400">
                 Sign up
               </Link>
             </p>

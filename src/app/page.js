@@ -3,44 +3,44 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-green-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-lime-50 dark:from-zinc-950 dark:via-black dark:to-zinc-950">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-900/30"></div>
-          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-green-200/50 blur-3xl dark:bg-green-900/30"></div>
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-cyan-200/50 blur-3xl dark:bg-cyan-900/30"></div>
+          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-lime-200/50 blur-3xl dark:bg-lime-900/30"></div>
         </div>
-        
+
         <div className="relative mx-auto max-w-6xl px-6 py-24 text-center lg:py-32">
           {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/50 dark:text-blue-300">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-cyan-100 px-4 py-2 text-sm font-medium text-cyan-700 dark:bg-cyan-900/50 dark:text-cyan-300">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
             </span>
             New Batch Starting Soon!
           </div>
-          
+
           <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Master{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
               Physics
             </span>{" "}
             &{" "}
-            <span className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-lime-500 to-green-500 bg-clip-text text-transparent">
               Mathematics
             </span>
           </h1>
-          
+
           <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 md:text-xl">
             Quality tutoring to help you excel in Physics and Maths. From basic concepts to advanced problem-solving, we guide you every step of the way.
           </p>
-          
+
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105"
+              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-105"
             >
               Get Started
               <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +57,7 @@ export default function Home() {
               View Courses
             </Link>
           </div>
-          
+
           {/* Stats */}
           <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
@@ -84,7 +84,7 @@ export default function Home() {
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Why Choose Us</span>
+            <span className="text-sm font-semibold uppercase tracking-wider text-cyan-500 dark:text-cyan-400">Why Choose Us</span>
             <h2 className="mt-2 text-3xl font-bold text-zinc-900 dark:text-white md:text-4xl">
               Everything You Need to Succeed
             </h2>
@@ -92,11 +92,11 @@ export default function Home() {
               We provide comprehensive support to help you achieve your academic goals
             </p>
           </div>
-          
+
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {/* Feature 1 */}
             <div className="group rounded-3xl bg-white p-8 shadow-sm transition-all hover:shadow-xl dark:bg-zinc-900">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-2xl text-white shadow-lg shadow-blue-500/30">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-2xl text-white shadow-lg shadow-cyan-500/30">
                 👨‍🏫
               </div>
               <h3 className="mt-6 text-xl font-bold text-zinc-900 dark:text-white">
@@ -105,7 +105,7 @@ export default function Home() {
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
                 Learn from experienced educators with proven track records in Physics and Mathematics.
               </p>
-              <Link href="/about" className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400">
+              <Link href="/about" className="mt-4 inline-flex items-center text-sm font-semibold text-cyan-500 transition-colors hover:text-cyan-600 dark:text-cyan-400">
                 Learn more
                 <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -115,7 +115,7 @@ export default function Home() {
 
             {/* Feature 2 */}
             <div className="group rounded-3xl bg-white p-8 shadow-sm transition-all hover:shadow-xl dark:bg-zinc-900">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 text-2xl text-white shadow-lg shadow-green-500/30">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-lime-500 to-lime-600 text-2xl text-white shadow-lg shadow-lime-500/30">
                 🎯
               </div>
               <h3 className="mt-6 text-xl font-bold text-zinc-900 dark:text-white">
@@ -124,7 +124,7 @@ export default function Home() {
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
                 Customized study plans tailored to your learning pace and academic goals.
               </p>
-              <Link href="/courses" className="mt-4 inline-flex items-center text-sm font-semibold text-green-600 transition-colors hover:text-green-700 dark:text-green-400">
+              <Link href="/courses" className="mt-4 inline-flex items-center text-sm font-semibold text-lime-500 transition-colors hover:text-lime-600 dark:text-lime-400">
                 View courses
                 <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -158,28 +158,28 @@ export default function Home() {
       <section className="bg-zinc-100 py-20 dark:bg-zinc-900/50">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-green-600 dark:text-green-400">What We Teach</span>
+            <span className="text-sm font-semibold uppercase tracking-wider text-lime-500 dark:text-lime-400">What We Teach</span>
             <h2 className="mt-2 text-3xl font-bold text-zinc-900 dark:text-white md:text-4xl">
               Subjects We Teach
             </h2>
           </div>
-          
+
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
             {/* Physics Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-white shadow-xl">
+            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-500 to-cyan-700 p-8 text-white shadow-xl">
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
                   <span className="text-4xl">⚛️</span>
                   <h3 className="text-2xl font-bold">Physics</h3>
                 </div>
-                <p className="mt-3 text-blue-100">
+                <p className="mt-3 text-cyan-100">
                   From classical mechanics to modern physics, master every concept with clarity.
                 </p>
                 <ul className="mt-6 grid grid-cols-2 gap-3">
                   {['Mechanics', 'Electromagnetism', 'Waves & Optics', 'Thermodynamics', 'Modern Physics', 'Quantum Basics'].map((topic) => (
                     <li key={topic} className="flex items-center gap-2 text-sm">
-                      <svg className="h-4 w-4 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="h-4 w-4 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {topic}
@@ -196,20 +196,20 @@ export default function Home() {
             </div>
 
             {/* Mathematics Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-green-500 to-green-700 p-8 text-white shadow-xl">
+            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-lime-500 to-lime-700 p-8 text-white shadow-xl">
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl"></div>
               <div className="relative">
                 <div className="flex items-center gap-3">
                   <span className="text-4xl">📐</span>
                   <h3 className="text-2xl font-bold">Mathematics</h3>
                 </div>
-                <p className="mt-3 text-green-100">
+                <p className="mt-3 text-lime-100">
                   Build strong foundations from algebra to calculus with step-by-step guidance.
                 </p>
                 <ul className="mt-6 grid grid-cols-2 gap-3">
                   {['Algebra', 'Calculus', 'Trigonometry', 'Geometry', 'Statistics', 'Probability'].map((topic) => (
                     <li key={topic} className="flex items-center gap-2 text-sm">
-                      <svg className="h-4 w-4 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="h-4 w-4 text-lime-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {topic}
@@ -231,7 +231,7 @@ export default function Home() {
       {/* Daily Questions Promo */}
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 p-1">
+          <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-cyan-500 to-lime-500 p-1">
             <div className="rounded-[22px] bg-white p-8 dark:bg-zinc-900 md:p-12">
               <div className="flex flex-col items-center gap-8 md:flex-row">
                 <div className="flex-1 text-center md:text-left">
@@ -246,7 +246,7 @@ export default function Home() {
                   </p>
                   <Link
                     href="/daily-questions"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 px-6 py-3 font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
                   >
                     Try Today&apos;s Questions
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -279,11 +279,11 @@ export default function Home() {
               What Our Students Say
             </h2>
           </div>
-          
+
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               { name: 'Rahul S.', class: 'Class 12', text: 'My Physics marks improved from 60 to 92 in just 3 months! The teaching style is amazing.', rating: 5 },
-              { name: 'Priya M.', class: 'Class 11', text: 'Maths used to be my nightmare. Now it\'s my favorite subject thanks to Kirusil Tuition!', rating: 5 },
+              { name: 'Priya M.', class: 'Class 11', text: 'Maths used to be my nightmare. Now it\'s my favorite subject thanks to Kurisil Academy!', rating: 5 },
               { name: 'Arjun K.', class: 'JEE Aspirant', text: 'Best coaching for JEE preparation. The doubt sessions are really helpful.', rating: 5 },
             ].map((testimonial, index) => (
               <div key={index} className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-800">
@@ -310,9 +310,9 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-600"></div>
-        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/svg%3E\")"}}></div>
-        
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-lime-500"></div>
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl">
             Ready to Excel in Physics & Maths?
@@ -331,7 +331,7 @@ export default function Home() {
               </svg>
             </Link>
             <a
-              href="tel:+911234567890"
+              href="tel:+919159129187"
               className="flex items-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/10"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

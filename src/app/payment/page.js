@@ -114,7 +114,7 @@ export default function Payment() {
     <PayPalScriptProvider options={paypalOptions}>
       <div className="min-h-screen bg-zinc-50 dark:bg-black">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 py-20">
+        <section className="bg-gradient-to-r from-lime-500 to-cyan-500 py-20">
           <div className="mx-auto max-w-6xl px-6 text-center">
             <h1 className="text-4xl font-bold text-white md:text-5xl">Fee Payment</h1>
             <p className="mt-4 text-lg text-white/90">

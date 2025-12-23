@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
+import BackToTop from "@/components/BackToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,14 +18,14 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Kirusil Tuition Center | Physics & Maths Tutoring",
-    template: "%s | Kirusil Tuition Center",
+    default: "Kurisil Academy | Physics & Maths Tutoring",
+    template: "%s | Kurisil Academy",
   },
-  description: "Kirusil Tuition Center offers quality tutoring in Physics and Mathematics for students of all levels. Personalized learning, experienced teachers, and proven results. Join us for academic excellence!",
-  keywords: ["physics tuition", "maths tuition", "tuition center", "physics tutoring", "mathematics tutoring", "online tuition", "Kirusil", "exam preparation", "CBSE tuition", "ICSE tuition"],
-  authors: [{ name: "Kirusil Tuition Center" }],
-  creator: "Kirusil Tuition Center",
-  publisher: "Kirusil Tuition Center",
+  description: "Kurisil Academy offers quality tutoring in Physics and Mathematics for students of all levels. Personalized learning, experienced teachers, and proven results. Join us for academic excellence!",
+  keywords: ["physics tuition", "maths tuition", "academy", "physics tutoring", "mathematics tutoring", "online tuition", "Kurisil", "exam preparation", "CBSE tuition", "ICSE tuition"],
+  authors: [{ name: "Kurisil Academy" }],
+  creator: "Kurisil Academy",
+  publisher: "Kurisil Academy",
   robots: {
     index: true,
     follow: true,
@@ -38,30 +40,30 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://kirusil.vercel.app",
-    siteName: "Kirusil Tuition Center",
-    title: "Kirusil Tuition Center | Physics & Maths Tutoring",
+    url: "https://kurisil.vercel.app",
+    siteName: "Kurisil Academy",
+    title: "Kurisil Academy | Physics & Maths Tutoring",
     description: "Quality tutoring in Physics and Mathematics. Personalized learning with experienced teachers for academic excellence.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kirusil Tuition Center",
+        alt: "Kurisil Academy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kirusil Tuition Center | Physics & Maths Tutoring",
-    description: "Quality tutoring in Physics and Mathematics. Join Kirusil for academic excellence!",
+    title: "Kurisil Academy | Physics & Maths Tutoring",
+    description: "Quality tutoring in Physics and Mathematics. Join Kurisil for academic excellence!",
     images: ["/og-image.png"],
   },
   verification: {
     google: "your-google-verification-code", // Replace with actual code
   },
   alternates: {
-    canonical: "https://kirusil.vercel.app",
+    canonical: "https://kurisil.vercel.app",
   },
 };
 
@@ -88,7 +90,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              "name": "Kirusil Tuition Center",
+              "name": "Kirusil Academy",
               "description": "Quality tutoring in Physics and Mathematics for students of all levels.",
               "url": "https://kirusil.vercel.app",
               "logo": "https://kirusil.vercel.app/logo.jpg",
@@ -99,15 +101,15 @@ export default function RootLayout({ children }) {
               ],
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Your Street Address",
-                "addressLocality": "Your City",
-                "addressRegion": "Your State",
-                "postalCode": "Your Postal Code",
+                "streetAddress": "3/38 Mettu Street, Pachal (P.O)",
+                "addressLocality": "Namakkal",
+                "addressRegion": "Tamil Nadu",
+                "postalCode": "637018",
                 "addressCountry": "IN"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-XXXXXXXXXX",
+                "telephone": "+91-9159129187",
                 "contactType": "customer service",
                 "availableLanguage": ["English", "Tamil", "Hindi"]
               },
@@ -127,6 +129,8 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <BackToTop />
+          <WhatsAppButton />
         </AuthProvider>
       </body>
     </html>

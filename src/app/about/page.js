@@ -4,9 +4,9 @@ export default function About() {
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-green-600 py-20">
+      <section className="bg-gradient-to-r from-cyan-500 to-lime-500 py-20">
         <div className="mx-auto max-w-6xl px-6 text-center">
-          <h1 className="text-4xl font-bold text-white md:text-5xl">About Kirusil Tuition</h1>
+          <h1 className="text-4xl font-bold text-white md:text-5xl">About Kurisil Academy</h1>
           <p className="mt-4 text-lg text-white/90">
             Empowering students to excel in Physics and Mathematics since 2020
           </p>
@@ -18,14 +18,14 @@ export default function About() {
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="text-3xl font-bold text-black dark:text-white">Our Story</h2>
           <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-            Kirusil Tuition was founded with a simple mission: to make Physics and Mathematics 
-            accessible and enjoyable for every student. We believe that with the right guidance 
+            Kurisil Academy was founded with a simple mission: to make Physics and Mathematics
+            accessible and enjoyable for every student. We believe that with the right guidance
             and support, any student can master these subjects and achieve academic excellence.
           </p>
           <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-            Our experienced team of educators is passionate about teaching and committed to 
-            helping students build strong foundations in science and mathematics. We use 
-            innovative teaching methods and personalized attention to ensure each student 
+            Our experienced team of educators is passionate about teaching and committed to
+            helping students build strong foundations in science and mathematics. We use
+            innovative teaching methods and personalized attention to ensure each student
             reaches their full potential.
           </p>
         </div>
@@ -35,17 +35,17 @@ export default function About() {
       <section className="bg-white py-16 dark:bg-zinc-900">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl bg-blue-50 p-8 dark:bg-blue-950">
-              <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-400">🎯 Our Mission</h3>
+            <div className="rounded-2xl bg-cyan-50 p-8 dark:bg-cyan-950">
+              <h3 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400">🎯 Our Mission</h3>
               <p className="mt-4 text-zinc-700 dark:text-zinc-300">
-                To provide quality education in Physics and Mathematics that empowers students 
+                To provide quality education in Physics and Mathematics that empowers students
                 to think critically, solve problems confidently, and achieve their academic goals.
               </p>
             </div>
-            <div className="rounded-2xl bg-green-50 p-8 dark:bg-green-950">
-              <h3 className="text-2xl font-bold text-green-700 dark:text-green-400">🌟 Our Vision</h3>
+            <div className="rounded-2xl bg-lime-50 p-8 dark:bg-lime-950">
+              <h3 className="text-2xl font-bold text-lime-700 dark:text-lime-400">🌟 Our Vision</h3>
               <p className="mt-4 text-zinc-700 dark:text-zinc-300">
-                To be the leading tuition center known for producing students who excel in 
+                To be the leading academy known for producing students who excel in
                 competitive exams and develop a lifelong love for learning.
               </p>
             </div>
@@ -109,7 +109,7 @@ export default function About() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-block rounded-full bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-blue-700"
+            className="mt-8 inline-block rounded-full bg-cyan-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-cyan-600"
           >
             Contact Us
           </Link>
