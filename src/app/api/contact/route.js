@@ -3,8 +3,6 @@ import Contact from '@/models/Contact';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request) {
   try {
     await dbConnect();
@@ -30,11 +28,13 @@ export async function POST(request) {
 
     // Send email notification via Resend
     try {
-      await resend.emails.send({
-        from: 'Kurisil Contact Form <onboarding@resend.dev>',
-        to: 'kirusildata@gmail.com',
-        subject: `New Contact Form Submission: ${subject || 'General Inquiry'}`,
-        html: `
+      if (process.env.RESEND_API_KEY) {
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        await resend.emails.send({
+          from: 'Kurisil Contact Form <onboarding@resend.dev>',
+          to: 'kirusildata@gmail.com',
+          subject: `New Contact Form Submission: ${subject || 'General Inquiry'}`,
+          html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: linear-gradient(to right, #2563eb, #16a34a); padding: 20px; border-radius: 10px 10px 0 0;">
               <h1 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h1>
@@ -70,7 +70,8 @@ export async function POST(request) {
             </div>
           </div>
         `,
-      });
+        });
+      }
     } catch (emailError) {
       console.error('Failed to send email:', emailError);
       // Continue even if email fails - data is saved to MongoDB
