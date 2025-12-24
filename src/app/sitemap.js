@@ -1,6 +1,6 @@
 export default function sitemap() {
   const baseUrl = 'https://kurisil.vercel.app';
-  
+
   const routes = [
     {
       url: baseUrl,
