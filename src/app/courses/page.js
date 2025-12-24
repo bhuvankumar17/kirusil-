@@ -1,62 +1,21 @@
 import Link from "next/link";
+import dbConnect from "@/lib/mongodb";
+import Course from "@/models/Course";
 
-export default function Courses() {
-  const courses = [
-    {
-      id: 1,
-      title: "Physics - Class 11",
-      description: "Complete physics course covering Mechanics, Thermodynamics, Waves, and Optics",
-      topics: ["Kinematics", "Laws of Motion", "Work & Energy", "Rotational Motion", "Gravitation", "Thermodynamics"],
-      duration: "12 months",
-      price: "₹15,000/year",
-      color: "blue",
-    },
-    {
-      id: 2,
-      title: "Physics - Class 12",
-      description: "Advanced physics covering Electrostatics, Magnetism, Optics, and Modern Physics",
-      topics: ["Electrostatics", "Current Electricity", "Magnetism", "EMI", "Optics", "Modern Physics"],
-      duration: "12 months",
-      price: "₹18,000/year",
-      color: "blue",
-    },
-    {
-      id: 3,
-      title: "Mathematics - Class 11",
-      description: "Foundation course in Algebra, Trigonometry, Coordinate Geometry, and Calculus",
-      topics: ["Sets & Functions", "Trigonometry", "Complex Numbers", "Sequences", "Straight Lines", "Conic Sections"],
-      duration: "12 months",
-      price: "₹15,000/year",
-      color: "green",
-    },
-    {
-      id: 4,
-      title: "Mathematics - Class 12",
-      description: "Advanced mathematics including Calculus, Vectors, 3D Geometry, and Probability",
-      topics: ["Relations & Functions", "Calculus", "Vectors", "3D Geometry", "Probability", "Linear Programming"],
-      duration: "12 months",
-      price: "₹18,000/year",
-      color: "green",
-    },
-    {
-      id: 5,
-      title: "JEE Mains Preparation",
-      description: "Comprehensive preparation for JEE Mains covering Physics and Mathematics",
-      topics: ["Complete Physics", "Complete Mathematics", "Previous Year Papers", "Mock Tests", "Doubt Sessions"],
-      duration: "12 months",
-      price: "₹35,000/year",
-      color: "purple",
-    },
-    {
-      id: 6,
-      title: "NEET Physics",
-      description: "Physics preparation specifically designed for NEET aspirants",
-      topics: ["Mechanics", "Heat & Thermodynamics", "Optics", "Electrodynamics", "Modern Physics", "Mock Tests"],
-      duration: "12 months",
-      price: "₹25,000/year",
-      color: "orange",
-    },
-  ];
+// Fetch courses from database
+async function getCourses() {
+  try {
+    await dbConnect();
+    const courses = await Course.find({ isActive: true }).sort({ order: 1, createdAt: -1 }).lean();
+    return JSON.parse(JSON.stringify(courses));
+  } catch (error) {
+    console.error('Error fetching courses:', error);
+    return [];
+  }
+}
+
+export default async function Courses() {
+  const courses = await getCourses();
 
   const getColorClasses = (color) => {
     const colors = {
@@ -64,6 +23,8 @@ export default function Courses() {
       green: "border-lime-200 bg-lime-50 dark:border-lime-800 dark:bg-lime-950",
       purple: "border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950",
       orange: "border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950",
+      cyan: "border-cyan-200 bg-cyan-50 dark:border-cyan-800 dark:bg-cyan-950",
+      lime: "border-lime-200 bg-lime-50 dark:border-lime-800 dark:bg-lime-950",
     };
     return colors[color] || colors.blue;
   };
@@ -74,6 +35,8 @@ export default function Courses() {
       green: "text-lime-700 dark:text-lime-400",
       purple: "text-purple-700 dark:text-purple-400",
       orange: "text-orange-700 dark:text-orange-400",
+      cyan: "text-cyan-700 dark:text-cyan-400",
+      lime: "text-lime-700 dark:text-lime-400",
     };
     return colors[color] || colors.blue;
   };
@@ -93,55 +56,68 @@ export default function Courses() {
       {/* Courses Grid */}
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {courses.map((course) => (
-              <div
-                key={course.id}
-                className={`rounded-2xl border-2 p-6 transition-transform hover:scale-105 ${getColorClasses(course.color)}`}
-              >
-                <h3 className={`text-xl font-bold ${getTitleColor(course.color)}`}>
-                  {course.title}
-                </h3>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  {course.description}
-                </p>
-                
-                <div className="mt-4">
-                  <h4 className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">Topics Covered:</h4>
-                  <ul className="mt-2 space-y-1">
-                    {course.topics.slice(0, 4).map((topic, index) => (
-                      <li key={index} className="text-sm text-zinc-600 dark:text-zinc-400">
-                        • {topic}
-                      </li>
-                    ))}
-                    {course.topics.length > 4 && (
-                      <li className="text-sm text-zinc-500 dark:text-zinc-500">
-                        + {course.topics.length - 4} more topics
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-zinc-200 pt-4 dark:border-zinc-700">
-                  <div>
-                    <p className="text-xs text-zinc-500">Duration</p>
-                    <p className="font-semibold text-zinc-800 dark:text-zinc-200">{course.duration}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs text-zinc-500">Fee</p>
-                    <p className="font-bold text-zinc-800 dark:text-zinc-200">{course.price}</p>
-                  </div>
-                </div>
-
-                <Link
-                  href="/contact"
-                  className="mt-4 block w-full rounded-full bg-zinc-900 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
+          {courses.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-zinc-600 dark:text-zinc-400">No courses available at the moment. Please check back later!</p>
+            </div>
+          ) : (
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {courses.map((course) => (
+                <div
+                  key={course._id}
+                  className={`relative rounded-2xl border-2 p-6 transition-transform hover:scale-105 ${getColorClasses(course.color)}`}
                 >
-                  Enroll Now
-                </Link>
-              </div>
-            ))}
-          </div>
+                  {course.isPopular && (
+                    <span className="absolute -top-3 left-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className={`text-xl font-bold ${getTitleColor(course.color)}`}>
+                    {course.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                    {course.description}
+                  </p>
+
+                  {course.topics && course.topics.length > 0 && (
+                    <div className="mt-4">
+                      <h4 className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">Topics Covered:</h4>
+                      <ul className="mt-2 space-y-1">
+                        {course.topics.slice(0, 4).map((topic, index) => (
+                          <li key={index} className="text-sm text-zinc-600 dark:text-zinc-400">
+                            • {topic}
+                          </li>
+                        ))}
+                        {course.topics.length > 4 && (
+                          <li className="text-sm text-zinc-500 dark:text-zinc-500">
+                            + {course.topics.length - 4} more topics
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="mt-6 flex items-center justify-between border-t border-zinc-200 pt-4 dark:border-zinc-700">
+                    <div>
+                      <p className="text-xs text-zinc-500">Duration</p>
+                      <p className="font-semibold text-zinc-800 dark:text-zinc-200">{course.duration}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-zinc-500">Fee</p>
+                      <p className="font-bold text-zinc-800 dark:text-zinc-200">₹{course.price?.toLocaleString()}/year</p>
+                    </div>
+                  </div>
+
+                  <Link
+                    href="/contact"
+                    className="mt-4 block w-full rounded-full bg-zinc-900 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
+                  >
+                    Enroll Now
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
