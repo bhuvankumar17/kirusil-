@@ -185,8 +185,8 @@ export default function AdminDashboard() {
     setShowEditModal(true);
   };
 
-  const filteredQuestions = filter === 'all' 
-    ? questions 
+  const filteredQuestions = filter === 'all'
+    ? questions
     : questions.filter(q => q.subject === filter);
 
   if (loading) {
@@ -230,6 +230,18 @@ export default function AdminDashboard() {
               Logout
             </button>
           </div>
+        </div>
+        {/* Navigation */}
+        <div className="mx-auto max-w-7xl px-4 py-2 flex gap-4 border-t border-zinc-800">
+          <Link href="/admin/dashboard" className="px-4 py-2 text-sm font-medium text-cyan-400 bg-cyan-500/10 rounded-lg">
+            Questions
+          </Link>
+          <Link href="/admin/courses" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors">
+            Courses
+          </Link>
+          <Link href="/admin/payments" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors">
+            Payments
+          </Link>
         </div>
       </header>
 
@@ -344,11 +356,10 @@ export default function AdminDashboard() {
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${question.subject === 'physics' ? 'bg-blue-500/20 text-blue-400' : 'bg-lime-500/20 text-lime-400'}`}>
                         {question.subject === 'physics' ? '⚛️ Physics' : '📐 Maths'}
                       </span>
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        question.difficulty === 'easy' ? 'bg-green-500/20 text-green-400' :
-                        question.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-red-500/20 text-red-400'
-                      }`}>
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${question.difficulty === 'easy' ? 'bg-green-500/20 text-green-400' :
+                          question.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                            'bg-red-500/20 text-red-400'
+                        }`}>
                         {question.difficulty}
                       </span>
                     </div>
