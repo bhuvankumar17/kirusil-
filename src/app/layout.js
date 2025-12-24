@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://kurisil.vercel.app"),
   title: {
     default: "Kurisil Academy | Physics & Maths Tutoring",
     template: "%s | Kurisil Academy",
@@ -60,7 +61,7 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual code
+    google: "your-google-verification-code", // TODO: Replace with actual Google Search Console verification code
   },
   alternates: {
     canonical: "https://kurisil.vercel.app",
@@ -90,14 +91,16 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              "name": "Kirusil Academy",
-              "description": "Quality tutoring in Physics and Mathematics for students of all levels.",
-              "url": "https://kirusil.vercel.app",
-              "logo": "https://kirusil.vercel.app/logo.jpg",
+              "name": "Kurisil Academy",
+              "alternateName": "Kurisil Physics Academy",
+              "description": "Quality tutoring in Physics and Mathematics for students of all levels. Expert teachers, personalized learning, and proven results in Namakkal, Tamil Nadu.",
+              "url": "https://kurisil.vercel.app",
+              "logo": "https://kurisil.vercel.app/logo.png",
+              "image": "https://kurisil.vercel.app/og-image.png",
               "sameAs": [
-                "https://www.facebook.com/kirusil",
-                "https://www.instagram.com/kirusil",
-                "https://twitter.com/kirusil"
+                "https://www.facebook.com/kurisil",
+                "https://www.instagram.com/kurisil",
+                "https://twitter.com/kurisil"
               ],
               "address": {
                 "@type": "PostalAddress",

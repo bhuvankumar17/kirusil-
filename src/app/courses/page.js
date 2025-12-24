@@ -2,6 +2,20 @@ import Link from "next/link";
 import dbConnect from "@/lib/mongodb";
 import Course from "@/models/Course";
 
+export const metadata = {
+  title: "Our Courses",
+  description: "Explore comprehensive Physics and Mathematics courses at Kurisil Academy. Classes for 11th, 12th, JEE, and NEET preparation. Quality education with experienced faculty in Namakkal.",
+  keywords: ["physics courses namakkal", "maths tuition", "JEE preparation", "NEET physics", "class 11 physics", "class 12 maths", "competitive exam coaching"],
+  openGraph: {
+    title: "Our Courses | Kurisil Academy",
+    description: "Explore comprehensive Physics and Mathematics courses at Kurisil Academy. Classes for 11th, 12th, JEE, and NEET preparation.",
+    url: "https://kurisil.vercel.app/courses",
+  },
+  alternates: {
+    canonical: "https://kurisil.vercel.app/courses",
+  },
+};
+
 // Fetch courses from database
 async function getCourses() {
   try {

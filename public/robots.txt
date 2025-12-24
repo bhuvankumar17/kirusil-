@@ -1,11 +1,18 @@
-# Robots.txt for Kirusil Academy
-# https://kirusil.vercel.app
+# Robots.txt for Kurisil Academy
+# https://kurisil.vercel.app
 
 User-agent: *
 Allow: /
 
-# Disallow admin or private paths (if any)
+# Disallow admin and private paths
 Disallow: /api/
+Disallow: /admin/
+Disallow: /login
+Disallow: /signup
+
+# Disallow Next.js internal paths
+Disallow: /_next/
+Disallow: /static/
 
 # Sitemap location
-Sitemap: https://kirusil.vercel.app/sitemap.xml
+Sitemap: https://kurisil.vercel.app/sitemap.xml

@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Our Programs",
+  description: "Explore learning programs at Kurisil Academy - tailored programs for Class 11, Class 12, JEE, NEET, and competitive exam preparation in Physics and Mathematics.",
+  keywords: ["learning programs", "JEE program", "NEET program", "class 11 program", "class 12 program", "physics program", "maths program"],
+  openGraph: {
+    title: "Our Programs | Kurisil Academy",
+    description: "Explore learning programs at Kurisil Academy - tailored for Class 11, Class 12, JEE, and NEET preparation.",
+    url: "https://kurisil.vercel.app/programs",
+  },
+  alternates: {
+    canonical: "https://kurisil.vercel.app/programs",
+  },
+};
+
 export default function Programs() {
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">

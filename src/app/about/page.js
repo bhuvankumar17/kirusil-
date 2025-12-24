@@ -1,5 +1,19 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "About Us",
+  description: "Learn about Kurisil Academy - your trusted partner for Physics and Mathematics tutoring in Namakkal, Tamil Nadu. Experienced teachers, personalized learning, and proven results since 2020.",
+  keywords: ["about kurisil academy", "physics tutoring namakkal", "maths tuition tamil nadu", "best coaching center namakkal", "physics academy"],
+  openGraph: {
+    title: "About Us | Kurisil Academy",
+    description: "Learn about Kurisil Academy - your trusted partner for Physics and Mathematics tutoring. Experienced teachers and proven results since 2020.",
+    url: "https://kurisil.vercel.app/about",
+  },
+  alternates: {
+    canonical: "https://kurisil.vercel.app/about",
+  },
+};
+
 export default function About() {
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
